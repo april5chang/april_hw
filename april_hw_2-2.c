@@ -4,7 +4,7 @@
 
 int main(void)
 {
-	int a[9];
+	int a[10] = {0};
 	int i = 0, j = 0;
 	int temp = 0;
 	
