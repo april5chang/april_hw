@@ -28,10 +28,10 @@ int main(void)
 	} 
 	
 	printf("\nCalculating C(%d,%d)...\n", n, m);	
-	printf("C(%d,%d) = %d! / (%d - %d)! \n", n, m, n, n, m);
+	printf("C(%d,%d) = %d! / (%d-%d)!(%d)! \n", n, m, n, n, m, m);
 	
 	x =  fac(n);
-	y =  fac(n - m);
+	y =  fac(n - m) * fac(m);
    	printf("Answer= %d\n", (x / y));
    	
 	return 0;
