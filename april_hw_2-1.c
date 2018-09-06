@@ -11,9 +11,9 @@ int main(void)
 	{
 		scanf("%d %d", &n, &m);	
 		printf("The numbers you input are: %d, %d\n", n, m);
-		if(n * m == 0 || n < 0 || m < 0)
+		if(n * m <= 0)
 		{
-			printf("Please input integer:\n");
+			printf("Please input integer.\n");
 			printf("Please input interger n and m to solve combinations C(n,m): ");	
 		 	fflush(stdin);
 		}
