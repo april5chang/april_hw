@@ -5,22 +5,20 @@ int main(void)
 	int n = 0, m = 0;
 	int x = 0, y = 0;
 			
-	printf("Please input interger n and m to solve combinations C(n,m): \n");	
+	printf("Please input positive interger number n and m to solve combinations C(n,m): \n");	
 	
 	while(1)
 	{
 		scanf("%d %d", &n, &m);	
-		printf("The numbers you input are: %d, %d\n", n, m);
-		if(n * m <= 0)
+		printf("\nThe numbers you input are: %d, %d\n", n, m);
+		if(n < 0 || m < 0)
 		{
-			printf("Please input integer.\n");
-			printf("Please input interger n and m to solve combinations C(n,m): ");	
+			printf("Please input integer: ");
 		 	fflush(stdin);
 		}
 		else if( n < m )
 		{
-			printf("\nn must be bigger or equal to m.");
-			printf("\nPlease input interger n and m to solve combinations C(n,m): ");	
+			printf("\nn must be bigger or equal to m: ");
 			fflush(stdin);
 		}
 		else
@@ -37,7 +35,7 @@ int main(void)
 	return 0;
 }
 
-int fac(int n)
+int fac(int n)    
 {
 	if( n == 0 || n == 1)
 		return 1;
