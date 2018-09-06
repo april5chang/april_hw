@@ -1,9 +1,8 @@
-#include <stdio.h>
-
+#include <stdio.h> 
+int fac(int n);
 int main(void)
 {	 
 	int n = 0, m = 0;
-	int i = 0;
 	int x = 0, y = 0;
 			
 	printf("Please input interger n and m to solve combinations C(n,m): \n");	
@@ -12,16 +11,17 @@ int main(void)
 	{
 		scanf("%d %d", &n, &m);	
 		printf("The numbers you input are: %d, %d\n", n, m);
-		if(n * m == 0 )
+		if(n * m == 0 || n < 0 || m < 0)
 		{
 			printf("Please input integer:\n");
 			printf("Please input interger n and m to solve combinations C(n,m): ");	
 		 	fflush(stdin);
 		}
-		else if( n - m < 0)
+		else if( n < m )
 		{
 			printf("\nn must be bigger or equal to m.");
 			printf("\nPlease input interger n and m to solve combinations C(n,m): ");	
+			fflush(stdin);
 		}
 		else
 			break;
