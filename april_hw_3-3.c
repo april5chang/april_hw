@@ -1,12 +1,15 @@
 #include <stdio.h> 
-#include <math.h>
+#include <math.h> 
+#include <stdbool.h> 
+
+bool isPrime(int num);
 
 int main(void)
 {
-	int i = 0, num = 0;
-	float sqrtN = 0;
+	int num = 0;
 	
-	while(1)
+	/*input filter*/ 
+	while(1) 
 	{
 		printf("Please input number: ");
 		scanf("%d", &num);
@@ -20,22 +23,27 @@ int main(void)
 			break;
  	}
  	
-	sqrtN = sqrt(num);
+ 	if(isPrime(num))
+		printf("\nIt's a prime.\n");
+	else
+		printf("\nIt's not a prime.\n");
+		
+	return 0;	 
+}
+ 	
+bool isPrime(num)
+{
+	float sqrtN = sqrt(num);
+	bool boolN = true;
 	
-	for(i = 2 ; i < sqrtN ; i++)
+	for(int i = 2 ; i <= sqrtN ; i++)
 	{
 		if(num % i == 0)
 		{
-			printf("\nIt's not a prime.\n");
-			break;
-		}
-		else
-		{
-			printf("\nIt's a prime.");
+			boolN = false;
 			break;
 		}
 	}
-	
-	
-	return 0;
+	return boolN;
 }
+
