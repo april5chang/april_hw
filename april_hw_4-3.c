@@ -11,7 +11,7 @@ int main(void)
 	
 	printf("Please input an integer N to find fibonacchi F(N)\n");
 	printf("N must between 0 and 30. ");
-	printf("nIf there exists any decimal number, it will be chopped off.\n");
+	printf("\nIf there exists any decimal number, it will be chopped off.\n");
 	printf("Input number N: ");
 	
 	while(1)
