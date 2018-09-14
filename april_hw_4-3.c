@@ -27,7 +27,7 @@ int main(void)
 	
 	printf("\nFibonacchi F(%d) = ", inputN);
 	
-	if(inputN != 0 || inputN != 1)
+	if(inputN != 0 && inputN != 1)
 	{
 		for(i = 2 ; i <= inputN ; i++)
 		{

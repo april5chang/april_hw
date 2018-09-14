@@ -75,11 +75,11 @@ void readFile(FILE *fptr, int Matrix[X][Y])
 {
 	int i = 0, j = 0;
 	
-	if(!feof(fptr)) 
+	for(i = 0 ; i < X ; i++)
 	{
-		for(i = 0 ; i < X ; i++)
+		for(j = 0 ; j < Y ; j++)
 		{
-			for(j = 0 ; j < Y ; j++)
+			if(!feof(fptr)) 
 			{
 				fscanf(fptr, "%d", &Matrix[i][j]);
 				printf("%d ", Matrix[i][j]); 
