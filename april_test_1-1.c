@@ -5,8 +5,7 @@ void getGCD(int num1, int num2, int *result);
 int main()
 {
     int n1 = 0, n2 = 0;
-    int *ptr = NULL;
-    int GCD = 1;
+    int gcd = 1;
     
     printf("Please input 2 postive integer: ");
     
@@ -17,20 +16,21 @@ int main()
         if(n1 > 1 && n2 > 1)
             break;
         else
-            printf("\nPlease input positive integer: ");
+        {
+            printf("\nPlease input 2 positive integer: ");
             fflush(stdin);
+        }
     }
     
-    ptr = &GCD;
-    getGCD(n1, n2, ptr);
+    getGCD(n1, n2, &gcd);
     
-    if(GCD == 1) 
+    if(gcd == 1)
     {
-    	printf("\nThe 2 numbers are relatively prime.");
+    	printf("\nThe 2 numbers are relatively prime.\n");
 	}
     else
 	{
-		printf("\nGCD of two numbers = %d", GCD);
+		printf("\nGCD of two numbers = %d\n", gcd);
 	}
 	return 0;
 }
@@ -38,11 +38,11 @@ int main()
 void getGCD(int num1, int num2, int *ptr)
 {
     int i = 0;
-    int n = 0;
+    int min = 0;
     
-    num1 < num2 ? (n= num1) : (n = num2);
+    num1 < num2 ? (min = num1) : (min = num2);
 
-    for(i = n ; i > 0 ; i--)
+    for(i = min ; i > 0 ; i--)
 	{
         if( num1 % i == 0 && num2 % i == 0)
         {
